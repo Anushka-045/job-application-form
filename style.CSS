@@ -1,0 +1,145 @@
+/* 🔁 Universal reset: removes default spacing and makes box sizing predictable */
+/* 📦 Box Model */
+* {
+  margin: 0;               /* removes default margin */
+  padding: 0;              /* removes default padding */
+  box-sizing: border-box; /* includes border & padding inside width/height */
+}
+
+/* 🎨 Page background color (light transparent purple) */
+/* 🎨 Color & Background */
+body {
+  background-color: #8877a320; /* HEX + alpha (opacity 12%) */
+}
+
+/* 📏 Container for layout centering */
+/* 📐 Layout */
+.container {
+  max-width: 1000px; /* limits width to 1000px */
+  margin: 0 auto;    /* centers the container horizontally */
+}
+
+/* 🧾 Box styling for the application form */
+/* 📐 Layout + 📦 Box Model + 🎨 Background */
+.apply_box {
+  max-width: 500px;                         /* keeps form compact */
+  padding: 20px;                            /* space inside the box */
+  background-color: rgb(244, 244, 244);     /* light gray background */
+  margin: 0 auto;                           /* center horizontally */
+  margin-top: 50px;                         /* spacing from top */
+  box-shadow: 4px 3px 5px rgba(73, 71, 71, 0.195); /* soft outer shadow */
+  border-radius: 10px;                      /* rounded corners */
+}
+
+/* ✏️ Smaller subtitle text */
+/* 🅰️ Typography */
+.title_small {
+  font-size: 15px; /* makes subtitle smaller */
+}
+
+/* 📦 Grid container for input fields */
+/* 📐 Layout */
+.form_container {
+  margin-top: 20px; /* spacing from title */
+  display: grid;    /* enables CSS Grid layout */
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  /* ✅ responsive columns: min 200px, max takes remaining space */
+  gap: 20px; /* space between grid items */
+}
+
+/* 📦 Wrapper for each form field */
+/* 📐 Layout + Flexbox */
+.form_control {
+  display: flex;              /* enable flexbox */
+  flex-direction: column;     /* stack label and input vertically */
+}
+
+/* 🏷️ Label styling */
+/* 🅰️ Typography */
+label {
+  font-size: 15px;      /* readable label size */
+  margin-bottom: 5px;   /* space below label */
+}
+
+/* ✏️ Input, Select, Textarea common styling */
+/* 📦 Box Model + 🅰️ Typography */
+input,
+select,
+textarea {
+  padding: 6px 10px;            /* inner spacing */
+  border: 1px solid #ccc;       /* light gray border */
+  border-radius: 4px;           /* smooth corners */
+  font-size: 15px;              /* readable text size */
+}
+
+/* 🔷 Input highlight on focus */
+/* 🔧 Interaction */
+input:focus {
+  outline-color: rgb(0, 26, 255); /* blue outline when selected */
+}
+
+/* 📦 Button wrapper aligned to right */
+/* 📐 Layout + Flexbox */
+.button_container {
+  display: flex;              /* enables flexbox */
+  justify-content: flex-end; /* aligns content (button) to right */
+  margin-top: 20px;           /* spacing from form */
+}
+
+/* 🔘 Submit button styling */
+/* 📦 Box Model + 🎨 Background + 🅰️ Typography + 🔧 Interaction */
+button {
+  background-color: rgb(0, 26, 255); /* blue background */
+  border: transparent solid 2px;     /* invisible border initially */
+  padding: 5px 10px;                 /* button size */
+  color: white;                      /* white text */
+  border-radius: 8px;                /* rounded corners */
+  transition: 0.3s ease-in;          /* smooth change when hovered */
+}
+
+/* 🖱️ Hover effect for button */
+/* 🔧 Interaction */
+button:hover {
+  background-color: #ccc;                     /* turns light gray */
+  border: 2px solid rgb(0, 26, 255);          /* shows blue border */
+  color: black;                               /* changes text to black */
+  transition: 0.3s ease-out;                  /* smoother on release */
+  cursor: pointer;                            /* pointer on hover */
+}
+
+/* 📝 Textarea full width across grid */
+/* 📐 Grid Layout */
+.textarea_control {
+  grid-column: 1 / span 2; /* takes two grid columns */
+}
+
+/* 📏 Make textarea fill its space */
+/* 📦 Box Model */
+.textarea_control textarea {
+  width: 100%; /* stretches to full width */
+}
+
+/* 📱 Responsive behavior for small screens */
+/* 📐 Media Query + Grid Adjustment */
+@media (max-width: 460px) {
+  .textarea_control {
+    grid-column: 1 / span 1; /* shrink textarea to one column on small screens */
+  }
+}
+/* | Property Category    | Examples                                                      |
+| -------------------- | ------------------------------------------------------------- |
+| 📐 Layout            | `display`, `grid-template-columns`, `flex`, `justify-content` |
+| 📦 Box Model         | `padding`, `margin`, `border`, `box-sizing`                   |
+| 🅰️ Typography       | `font-size`, `color` (for text)                               |
+| 🎨 Background/Visual | `background-color`, `box-shadow`, `border-radius`             |
+| 🔧 Interaction       | `:focus`, `:hover`, `cursor`, `transition`                    |
+| 📱 Responsive        | `@media`, grid-span adjustments                               | */
+/* | Value           | Description                          |
+| --------------- | ------------------------------------ |
+| `flex-start`    | Aligns items to the **start** (left) |
+| `flex-end`      | Aligns items to the **end** (right)  |
+| `center`        | Centers items                        |
+| `space-between` | Equal space **between** items        |
+| `space-around`  | Equal space **around** items         |
+| `space-evenly`  | Equal space **between and around**   |
+ */
