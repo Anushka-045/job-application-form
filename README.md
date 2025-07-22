@@ -13,9 +13,7 @@ A fully responsive and accessible **Job Application Form** designed using **HTML
 - 🌈 Focus and hover effects for better interactivity
 - ✨ Clean UI with shadow and border radius
 
-## 📸 Screenshot
-
-> *(Include a screenshot of the form here for better appeal — you can upload an image and paste the GitHub path here)*
+ad an image and paste the GitHub path here)*
 
 ## 📂 Folder Structure
 
